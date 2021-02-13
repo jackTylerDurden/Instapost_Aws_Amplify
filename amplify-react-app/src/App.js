@@ -4,8 +4,8 @@ import './App.css';
 
 function App() {
   const [serviceCalls, updateServiceCalls] = useState(0)
-  const [nicknames, updateNicknames] = useState([])
-  const [hashtags, updateHashtags] = useState([])
+  const [nicknames, updateNicknames] = useState(['String 1'])
+  const [hashtags, updateHashtags] = useState(['Hashtag1'])
 
   async function fetchServiceCalls(){
     const data = await API.get('instapostapi','/service-calls')    
