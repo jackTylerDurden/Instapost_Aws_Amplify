@@ -1,15 +1,68 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-instapost-local-21431-authRole",
-      "UnauthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapost-local-21431-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapost-local-21431-authRole",
+      "AuthRoleName": "amplify-instapostapp-local-22521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapostapp-local-22521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapostapp-local-22521-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-instapost-local-21431-deployment",
-      "UnauthRoleName": "amplify-instapost-local-21431-unauthRole",
-      "StackName": "amplify-instapost-local-21431",
-      "StackId": "arn:aws:cloudformation:us-east-2:461153827628:stack/amplify-instapost-local-21431/4653f310-6de4-11eb-8be7-0a0774df732c",
-      "AmplifyAppId": "drrw6ziiqdtn1"
+      "DeploymentBucketName": "amplify-instapostapp-local-22521-deployment",
+      "UnauthRoleName": "amplify-instapostapp-local-22521-unauthRole",
+      "StackName": "amplify-instapostapp-local-22521",
+      "StackId": "arn:aws:cloudformation:us-east-2:461153827628:stack/amplify-instapostapp-local-22521/c8b5ad20-6de5-11eb-bcec-02c4dcc2fcca",
+      "AmplifyAppId": "drz3gqqdr9x1v"
+    }
+  },
+  "function": {
+    "instapostfunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-02-13T22:15:52.582Z",
+      "lastPackageTimeStamp": "2021-02-13T22:15:53.191Z",
+      "distZipFilename": "instapostfunction-5a746750665548466d4a-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-instapostapp-local-22521-deployment",
+        "s3Key": "amplify-builds/instapostfunction-5a746750665548466d4a-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-instapostapp-local-22521-deployment/amplify-cfn-templates/function/instapostfunction-cloudformation-template.json",
+        "logicalId": "functioninstapostfunction"
+      },
+      "lastPushTimeStamp": "2021-02-13T22:16:58.736Z",
+      "output": {
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:461153827628:function:instapostfunction-local",
+        "Name": "instapostfunction-local",
+        "LambdaExecutionRole": "instapostappLambdaRole5dafbce6-local"
+      },
+      "lastPushDirHash": "svU9GWt91AUZ4IAavk9oMBEh78g="
+    }
+  },
+  "api": {
+    "instapostapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "instapostfunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-instapostapp-local-22521-deployment/amplify-cfn-templates/api/instapostapi-cloudformation-template.json",
+        "logicalId": "apiinstapostapi"
+      },
+      "lastPushTimeStamp": "2021-02-13T22:16:58.727Z",
+      "output": {
+        "ApiName": "instapostapi",
+        "RootUrl": "https://j6q1rm0tqh.execute-api.us-east-2.amazonaws.com/local",
+        "ApiId": "j6q1rm0tqh"
+      },
+      "lastPushDirHash": "W+PEhUyWTYkVFSe+Qxf1zJEoYiE="
     }
   }
 }

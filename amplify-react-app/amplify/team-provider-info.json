@@ -1,15 +1,23 @@
 {
   "local": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-instapost-local-21431-authRole",
-      "UnauthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapost-local-21431-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapost-local-21431-authRole",
+      "AuthRoleName": "amplify-instapostapp-local-22521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapostapp-local-22521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::461153827628:role/amplify-instapostapp-local-22521-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-instapost-local-21431-deployment",
-      "UnauthRoleName": "amplify-instapost-local-21431-unauthRole",
-      "StackName": "amplify-instapost-local-21431",
-      "StackId": "arn:aws:cloudformation:us-east-2:461153827628:stack/amplify-instapost-local-21431/4653f310-6de4-11eb-8be7-0a0774df732c",
-      "AmplifyAppId": "drrw6ziiqdtn1"
+      "DeploymentBucketName": "amplify-instapostapp-local-22521-deployment",
+      "UnauthRoleName": "amplify-instapostapp-local-22521-unauthRole",
+      "StackName": "amplify-instapostapp-local-22521",
+      "StackId": "arn:aws:cloudformation:us-east-2:461153827628:stack/amplify-instapostapp-local-22521/c8b5ad20-6de5-11eb-bcec-02c4dcc2fcca",
+      "AmplifyAppId": "drz3gqqdr9x1v"
+    },
+    "categories": {
+      "function": {
+        "instapostfunction": {
+          "deploymentBucketName": "amplify-instapostapp-local-22521-deployment",
+          "s3Key": "amplify-builds/instapostfunction-5a746750665548466d4a-build.zip"
+        }
+      }
     }
   }
 }

@@ -1,0 +1,51 @@
+{
+    "paths": [
+        {
+            "name": "/service-calls",
+            "lambdaFunction": "instapostfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/service-calls"
+        },
+        {
+            "name": "/nicknames",
+            "lambdaFunction": "instapostfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/nicknames"
+        },
+        {
+            "name": "/hashtags",
+            "lambdaFunction": "instapostfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/hashtags"
+        }
+    ],
+    "resourceName": "instapostapi",
+    "apiName": "instapostapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "instapostfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-instapostapp-local-22521-authRole",
+        "unAuthRoleName": "amplify-instapostapp-local-22521-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "instapostfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
