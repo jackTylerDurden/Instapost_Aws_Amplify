@@ -17,25 +17,25 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-02-13T22:15:52.582Z",
-      "lastPackageTimeStamp": "2021-02-13T22:15:53.191Z",
-      "distZipFilename": "instapostfunction-5a746750665548466d4a-build.zip",
+      "lastBuildTimeStamp": "2021-02-14T00:02:14.527Z",
+      "lastPackageTimeStamp": "2021-02-14T00:02:15.179Z",
+      "distZipFilename": "instapostfunction-6355372f796e37665458-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-instapostapp-local-22521-deployment",
-        "s3Key": "amplify-builds/instapostfunction-5a746750665548466d4a-build.zip"
+        "s3Key": "amplify-builds/instapostfunction-6355372f796e37665458-build.zip"
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-instapostapp-local-22521-deployment/amplify-cfn-templates/function/instapostfunction-cloudformation-template.json",
         "logicalId": "functioninstapostfunction"
       },
-      "lastPushTimeStamp": "2021-02-13T23:58:50.500Z",
+      "lastPushTimeStamp": "2021-02-14T00:03:21.082Z",
       "output": {
         "Region": "us-east-2",
         "Arn": "arn:aws:lambda:us-east-2:461153827628:function:instapostfunction-local",
         "Name": "instapostfunction-local",
         "LambdaExecutionRole": "instapostappLambdaRole5dafbce6-local"
       },
-      "lastPushDirHash": "svU9GWt91AUZ4IAavk9oMBEh78g="
+      "lastPushDirHash": "aaWiVmTArrjQVyE1KapcOqjHulo="
     }
   },
   "api": {
@@ -56,7 +56,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-instapostapp-local-22521-deployment/amplify-cfn-templates/api/instapostapi-cloudformation-template.json",
         "logicalId": "apiinstapostapi"
       },
-      "lastPushTimeStamp": "2021-02-13T23:58:50.503Z",
+      "lastPushTimeStamp": "2021-02-14T00:03:21.074Z",
       "output": {
         "ApiName": "instapostapi",
         "RootUrl": "https://j6q1rm0tqh.execute-api.us-east-2.amazonaws.com/local",

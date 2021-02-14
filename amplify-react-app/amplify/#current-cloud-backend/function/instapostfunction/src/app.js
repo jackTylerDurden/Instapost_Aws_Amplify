@@ -31,33 +31,24 @@ app.use(function(req, res, next) {
  **********************/
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const apiBaseUrl = 'https://bismarck.sdsu.edu/api/instapost-query/';
-app.get('/service-calls', function(req, res) {  
-  // const response = {"service-calls": 0}
-  // const apiEndpoint = apiBaseUrl + 'service-calls';
-  const temp = 'https://bismarck.sdsu.edu/api/instapost-query/service-calls';
-  axios.get(temp).then(response => {
-    console.log('response----->>>',response.data)
+app.get('/service-calls', function(req, res) {      
+  const apiEndpoint= apiBaseUrl + 'service-calls';
+  axios.get(apiEndpoint).then(response => {    
     const serviceCalls = response.data['service-calls']
     res.json({serviceCalls})
-  }).catch(err => res.json({ error: err }))
-  // const serviceCalls  = 0
-  // res.json({serviceCalls});
+  }).catch(err => res.json({ error: err }))  
 });
 
 app.get('/nicknames', function(req, res) {    
   const apiEndpoint= apiBaseUrl + 'nicknames';
-  axios.get(apiEndpoint).then(response => {
-    // res.json({nicknames:response.nicknames})    
+  axios.get(apiEndpoint).then(response => {    
     const nicknames = response.data['nicknames']
     res.json({nicknames})
   }).catch(err => res.json({ error: err }))
 });
 app.get('/hashtags', function(req, res) {  
-  // const hashtags = [ "HASHTAG1", "HASHTAG2"];
-  // res.json({hashtags});
   const apiEndpoint= apiBaseUrl + 'hashtags';
-  axios.get(apiEndpoint).then(response => {
-    // res.json({hashtags:response.hashtags})
+  axios.get(apiEndpoint).then(response => {    
     const hashtags = response.data['hashtags']
     res.json({hashtags})
   }).catch(err => res.json({ error: err }))
